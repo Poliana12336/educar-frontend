@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+
+<title>Gestão - educAR</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h2>educAR</h2>
+
+<a onclick="mostrar('usuarios')">
+👥 Usuários
+</a>
+
+<a onclick="mostrar('turmas')">
+🏫 Turmas
+</a>
+
+<a onclick="logout()">
+🚪 Sair
+</a>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+<div class="topbar">
+
+<h1>
+Painel Gestão
+</h1>
+
+</div>
+
+<!-- USUÁRIOS -->
+
+<div id="secaoUsuarios">
+
+<div class="card">
+
+<h2>Cadastrar Usuário</h2>
+
+<input id="nome" placeholder="Nome">
+
+<input id="email" placeholder="Email">
+
+<input id="senha" placeholder="Senha">
+
+<select id="role">
+<option value="aluno">Aluno</option>
+<option value="professor">Professor</option>
+<option value="gestao">Gestão</option>
+</select>
+
+<button onclick="criarUsuario()">
+Cadastrar
+</button>
+
+</div>
+
+<div id="listaUsuarios"></div>
+
+</div>
+
+<!-- TURMAS -->
+
+<div id="secaoTurmas" style="display:none;">
+
+<div class="card">
+
+<h2>Cadastrar Turma</h2>
+
+<input id="nomeTurma" placeholder="Nome da turma">
+
+<button onclick="criarTurma()">
+Criar Turma
+</button>
+
+</div>
+
+<div id="listaTurmas"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/gestao.js"></script>
+
+</body>
+</html>

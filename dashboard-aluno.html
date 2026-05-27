@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+
+<title>Aluno - educAR</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h2>educAR</h2>
+
+<a onclick="mostrar('capitulos')">
+📚 Capítulos
+</a>
+
+<a onclick="mostrar('progresso')">
+📊 Progresso
+</a>
+
+<a onclick="logout()">
+🚪 Sair
+</a>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+<div class="topbar">
+
+<h1 id="titulo"></h1>
+
+</div>
+
+<!-- CAPÍTULOS -->
+
+<div id="secaoCapitulos">
+
+<div id="listaCapitulos"></div>
+
+</div>
+
+<!-- PROGRESSO -->
+
+<div id="secaoProgresso" style="display:none;">
+
+<div class="card">
+
+<h2>Meu Progresso</h2>
+
+<p id="textoProgresso"></p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/aluno.js"></script>
+
+</body>
+</html>
