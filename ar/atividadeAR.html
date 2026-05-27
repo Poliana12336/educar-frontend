@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+
+<title>educAR - Realidade Aumentada</title>
+
+<script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+
+<style>
+
+body{
+margin:0;
+overflow:hidden;
+}
+
+#mensagem{
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+background:#122C4F;
+color:white;
+padding:14px 24px;
+border-radius:12px;
+font-weight:bold;
+display:none;
+z-index:999;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="mensagem">
+Atividade concluída!
+</div>
+
+<a-scene
+embedded
+vr-mode-ui="enabled: false"
+renderer="logarithmicDepthBuffer: true;"
+arjs="trackingMethod: best;
+sourceType: webcam;
+debugUIEnabled: false;">
+
+<!-- TEXTURAS -->
+<a-assets>
+
+<img
+id="terraTexture"
+src="../assets/textures/earth.jpg">
+
+</a-assets>
+
+<!-- MARCADOR -->
+<a-marker preset="hiro">
+
+<!-- GLOBO -->
+<a-sphere
+position="0 0.5 0"
+radius="0.5"
+src="#terraTexture"
+segments-height="64"
+segments-width="64"
+onclick="concluirAtividade()">
+</a-sphere>
+
+<!-- TEXTO -->
+<a-text
+value="Planeta Terra"
+position="-1 1.2 0"
+scale="1 1 1"
+color="white">
+</a-text>
+
+</a-marker>
+
+<!-- CAMERA -->
+<a-entity camera>
+<a-cursor rayOrigin="mouse"></a-cursor>
+</a-entity>
+
+</a-scene>
+
+<script>
+
+function concluirAtividade(){
+
+const usuario =
+JSON.parse(localStorage.getItem("usuario"));
+
+const capitulo =
+localStorage.getItem("capituloAtual");
+
+let progresso =
+JSON.parse(localStorage.getItem("progresso")) || [];
+
+const jaFez = progresso.find(p =>
+p.capitulo == capitulo &&
+p.aluno == usuario.id
+);
+
+if(!jaFez){
+
+progresso.push({
+capitulo: capitulo,
+aluno: usuario.id,
+concluido: true
+});
+
+localStorage.setItem(
+"progresso",
+JSON.stringify(progresso)
+);
+
+}
+
+document.getElementById("mensagem")
+.style.display = "block";
+
+setTimeout(() => {
+
+window.history.back();
+
+}, 1500);
+
+}
+
+</script>
+
+</body>
+</html>
