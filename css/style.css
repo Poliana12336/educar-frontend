@@ -1,0 +1,165 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#FBF9E4;
+color:#122C4F;
+}
+
+/* ================= LOGIN ================= */
+
+.login-container{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#122C4F;
+}
+
+.login-card{
+width:380px;
+background:#FBF9E4;
+padding:40px;
+border-radius:24px;
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+.logo{
+font-size:40px;
+font-weight:bold;
+color:#122C4F;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#5B88B2;
+margin-bottom:30px;
+}
+
+input{
+width:100%;
+padding:14px;
+border-radius:14px;
+border:2px solid #5B88B2;
+margin-bottom:16px;
+background:white;
+font-size:15px;
+outline:none;
+}
+
+input:focus{
+border-color:#122C4F;
+}
+
+button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:14px;
+background:#122C4F;
+color:#FBF9E4;
+font-size:15px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#5B88B2;
+}
+
+/* ================= DASHBOARD ================= */
+
+.dashboard{
+display:flex;
+min-height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:240px;
+background:#122C4F;
+padding:30px 20px;
+color:#FBF9E4;
+}
+
+.sidebar h2{
+margin-bottom:40px;
+font-size:30px;
+}
+
+.sidebar a{
+display:block;
+padding:14px;
+margin-bottom:10px;
+border-radius:12px;
+text-decoration:none;
+color:#FBF9E4;
+transition:0.3s;
+cursor:pointer;
+}
+
+.sidebar a:hover{
+background:#5B88B2;
+}
+
+/* MAIN */
+
+.main{
+flex:1;
+padding:40px;
+background:#FBF9E4;
+}
+
+.topbar{
+margin-bottom:30px;
+}
+
+.topbar h1{
+font-size:32px;
+color:#122C4F;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:22px;
+margin-bottom:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+border-left:8px solid #5B88B2;
+}
+
+.card h2{
+margin-bottom:10px;
+color:#122C4F;
+}
+
+.card p{
+margin-bottom:8px;
+color:#444;
+}
+
+.card button{
+margin-top:15px;
+width:auto;
+padding:12px 18px;
+}
+
+/* CAPÍTULOS */
+
+.capitulo{
+margin-bottom:18px;
+}
+
+/* STATUS */
+
+.status{
+margin-top:10px;
+font-weight:bold;
+color:#5B88B2;
+}
