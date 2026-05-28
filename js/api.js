@@ -1,1 +1,1 @@
-const API_URL = "https://driver-sauce-protected-the.trycloudflare.com";
+const API_URL = "URL PÚBLICA DA API";
