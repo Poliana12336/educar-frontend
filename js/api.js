@@ -1,1 +1,1 @@
-const API_URL = "https://driver-sauce-protected-the.trycloudflare.com"; //const API_URL = "http://192.168.94.38:8000";
+const API_URL = "https://driver-sauce-protected-the.trycloudflare.com";
